@@ -67,28 +67,7 @@ This project is a Flask web application that uses YOLO (You Only Look Once) for 
 2. **Access the application:**
 
     Open your web browser and go to `http://127.0.0.1:5000`.
-
-## Project Structure
-flask-yolo-detection/
-│
-├── static/
-│ └── files/
-│
-├── templates/
-│ ├── indexproject.html
-│ ├── ui.html
-│ └── videoprojectnew.html
-│
-├── YOLO-Weights/
-│ ├── yolov8n.pt
-│ ├── best.pt
-│ └── knife_weights.pt
-│
-├── app.py
-├── requirements.txt
-├── README.md
-└── .env
-
+   
 
 ## Email Notification
 
