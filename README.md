@@ -25,7 +25,7 @@ This project is a Flask web application that uses YOLO (You Only Look Once) for 
     ```sh
     git clone https://github.com/your-username/flask-yolo-detection.git
     cd flask-yolo-detection
-    ```
+    
 
 2. **Create a virtual environment and activate it:**
 
