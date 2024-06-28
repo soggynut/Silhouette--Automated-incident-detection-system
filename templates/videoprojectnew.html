@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white; /* Light background color */
+            color: white;
+        }
+
+        header.feature-box {
+            background-color: #3498db; /* Light blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        section.video-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80vh;
+            background-color: black;
+        }
+
+        .video-container {
+            width: 50%;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .form-container {
+            width: 45%;
+            text-align: center;
+            margin-top: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: black; /* Light gray */
+            padding: 20px;
+        }
+
+        .custom-file-upload {
+            background-color: #4CAF50;
+            color: green;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #45a049;
+        }
+
+        .file-name-box {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #fff;
+            color: green;
+        }
+
+        .btnCustom {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btnCustom:hover {
+            background-color: #005F6B;
+            
+
+        }
+
+        /* Styles for the popup */
+        #alertMessage {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+<header class="feature-box">
+    <h1><strong style="font-size: 24px;">Object Detection</strong></h1>
+</header>
+
+<section class="video-section">
+    <div class="video-container">
+        <video controls autoplay>
+            <source src="{{ url_for('video') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <section class="form-container">
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <label for="file-upload" class="custom-file-upload" style="background-color: #ccc;">
+                Choose File
+            </label>
+            
+            <button type="submit" class="btnCustom">Submit</button>
+        </form>
+    </section>
+</section>
+
+<!-- Alert message container -->
+<div id="alertMessage">
+    <strong>Fall Detected!</strong> Send help.
+</div>
+
+<script>
+    // JavaScript function to show the alert message
+    function showAlert() {
+        document.getElementById('alertMessage').style.display = 'block';
+    }
+
+    // JavaScript function to hide the alert message
+    function hideAlert() {
+        document.getElementById('alertMessage').style.display = 'none';
+    }
+    
+    // JavaScript function to display selected file name
+    function displayFileName(input) {
+        var fileName = input.files[0].name;
+        document.getElementById('file-name-box').innerText = fileName;
+    }
+</script>
+
+</body>
+</html>
