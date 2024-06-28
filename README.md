@@ -77,7 +77,7 @@ The application sends an email notification when a fall is detected. Ensure you 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-STEP BY STEP INSTRUCTIONS:
+## STEP BY STEP INSTRUCTIONS:
 
 Clone the repository:
 
@@ -86,7 +86,7 @@ Clone the repository:
    ```sh   
    git clone https://github.com/your-username/flask-yolo-detection.git
    cd flask-yolo-detection
-   '''
+   ```
 
 3) Create a virtual environment and activate it:
    
