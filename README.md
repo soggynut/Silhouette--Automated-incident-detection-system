@@ -1,4 +1,5 @@
-#Silhouette-Automated incident detection system
+
+## Silhouette-Automated incident detection system
 
 This project is a Flask web application that uses YOLO (You Only Look Once) for object detection in video streams. The application supports uploading videos, live webcam feed detection, and email alerts when specific incidents are detected.
 
